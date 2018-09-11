@@ -1,0 +1,18 @@
+# The chosen project's boilerplates as parent
+parent: { groupId: io.skullabs.boilerplates, artifactId: kotlin-1.2, version: 1.0.0 }
+
+# Project definition
+modelVersion: 4.0.0
+groupId: org.lambdify
+artifactId: lambdify-project-parent
+version: 0.7.1.Final
+packaging: pom
+
+modules:
+ - "lambdify-project-java"
+ - "lambdify-project-kotlin"
+
+repositories:
+  - { id: jcenter, url: "https://jcenter.bintray.com" }
+pluginRepositories:
+  - { id: jcenter, url: "https://jcenter.bintray.com" }
