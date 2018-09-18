@@ -19,25 +19,19 @@ properties:
   config.lambdify.handler:   "UNDEFINED-HANDLER"
 
   # versions of libraries used on this project
-  version.aws-lambda: "1.2.0"
   version.lambdify:   "0.7.2.Final"
-  version.aws-log4j2: "1.0.0"
-  version.log4j2:     "2.8.2"
   version.kotlin:     "1.2.31"
 
 dependencyManagement:
   dependencies:
     # Lambdify Dependencies
+    - { groupId: org.lambdify,     artifactId: lambdify-apigateway-kotlin,      version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-apigateway-java,        version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-apigateway-processor,   version: "${version.lambdify}", scope: provided }
     - { groupId: org.lambdify,     artifactId: lambdify-core,                   version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-apigateway,  version: "${version.lambdify}" }
-    # AWS Lambda Dependencies
-    - { groupId: com.amazonaws,    artifactId: aws-lambda-java-core,            version: "${version.aws-lambda}" }
-    - { groupId: com.amazonaws,    artifactId: aws-lambda-java-log4j2,          version: "${version.aws-log4j2}" }
-    # Log4j2 Dependencies
-    - { groupId: org.apache.logging.log4j,  artifactId: log4j-core,            version: "${version.log4j2}" }
-    - { groupId: org.apache.logging.log4j,  artifactId: log4j-api,             version: "${version.log4j2}" }
+    - { groupId: org.lambdify,     artifactId: lambdify-aws-events-s3,          version: "${version.lambdify}" }
+    - { groupId: org.lambdify,     artifactId: lambdify-aws-events-dynamodb,    version: "${version.lambdify}" }
 
 build:
   plugins:
