@@ -20,6 +20,7 @@ properties:
 
   # versions of libraries used on this project
   version.lambdify:   "0.7.3.Final"
+  version.lombok: 1.18.4
 
 dependencyManagement:
   dependencies:
