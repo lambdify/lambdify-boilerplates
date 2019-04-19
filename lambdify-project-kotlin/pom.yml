@@ -32,6 +32,8 @@ dependencyManagement:
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-apigateway,  version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-s3,          version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-dynamodb,    version: "${version.lambdify}" }
+    - { groupId: org.lambdify,     artifactId: lambdify-aws-events-sqs,         version: "${version.lambdify}" }
+    - { groupId: org.lambdify,     artifactId: lambdify-aws-events-kinesis,     version: "${version.lambdify}" }
 
 build:
   plugins:
@@ -40,7 +42,7 @@ build:
       artifactId: lambdify-plugin
       version: "0.8.0.Final"
       executions:
-        - { id: "package", goals: ["package"], phase: "verify" }
+        - { id: "package", goals: ["package"], phase: "package" }
         - { id: "s3-deploy", goals: ["s3-deploy"], phase: "deploy" }
       configuration:
         enabled:            ${config.lambdify.enabled}

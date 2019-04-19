@@ -31,6 +31,8 @@ dependencyManagement:
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-apigateway,  version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-s3,          version: "${version.lambdify}" }
     - { groupId: org.lambdify,     artifactId: lambdify-aws-events-dynamodb,    version: "${version.lambdify}" }
+    - { groupId: org.lambdify,     artifactId: lambdify-aws-events-sqs,         version: "${version.lambdify}" }
+    - { groupId: org.lambdify,     artifactId: lambdify-aws-events-kinesis,     version: "${version.lambdify}" }
 
 build:
   plugins:
